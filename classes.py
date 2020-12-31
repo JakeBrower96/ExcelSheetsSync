@@ -51,7 +51,7 @@ class airmen:
     rank: str
     crewPos: str
     isOnLeave: bool
-    scheduledLeave: List[date] #list[date]
+    scheduledLeave: List[date]
     isoOrRom: bool
     hundredPercentContact: str
     zoom: str
