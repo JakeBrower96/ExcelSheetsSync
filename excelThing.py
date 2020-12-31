@@ -16,11 +16,10 @@ scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/aut
 creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
 
+#opens the whole spreadsheet
 spreadSheet = client.open("testing")
-workingSheet = spreadSheet.worksheet("stuff")
+#pulls the particular spreadsheet that Capt. Wright uses to track airmen
+workingSheet = spreadSheet.worksheet("Airmen Directory")
 
+#all of the data that is associated with the airmen
 airmenData = workingSheet.get_all_records()
-
-row = workingSheet.row_values(19)
-
-pprint(row)
