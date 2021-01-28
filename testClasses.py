@@ -16,7 +16,7 @@ rank = "A1C"
 crewPos = "MSO"
 isOnLeave = False
 scheduledLeave = None 
-isoOrRom: False
+isoOrRom = False
 hundredPercentContact = "Capt Wright"
 zoom = "jacobbrower96@gmail.com"
 lineSqd = None
@@ -50,3 +50,6 @@ obCBTestStatus = 0 #not sure what this is
 completionRep = classes.completionReport(True, False, True, False, False, "This is a comment for A1C Jake Brower")
 remarks = "This is a remark for A1C Jake Brower :) ME!!!"
 #End of the variables to make 1 airmen object then I get to run tests :)
+
+#This very long line is the test for making the airmen object
+a1cJakeBrower = classes.airmen(name, rank, crewPos, isoOrRom, hundredPercentContact, dateArrived, sec, sereInfo, remarks)

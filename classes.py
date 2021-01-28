@@ -48,7 +48,7 @@ class completionReport:
 @dataclass
 class airmen:
     name: str
-    rank: str
+    # rank: str
     crewPos: str
     isOnLeave: bool
     scheduledLeave: List[date]
@@ -86,7 +86,7 @@ class airmen:
     completionRep: completionReport
     remarks: str
 
-    def __init__(self, name: str, rank: str, crewPos: str, isoOrRom: bool, hundredPercentContact: str, dateArrived: str, sec: int, sereInfo: sere, remarks: str):
+    def __init__(self, name: str, crewPos: str, isoOrRom: bool, hundredPercentContact: str, dateArrived: str, sec: int, sereInfo: sere, remarks: str):
         self.name = name
         self.rank = rank
         self.crewPos = crewPos
@@ -101,7 +101,7 @@ class airmen:
         self.shift = 0
         self.projStartDate = None
         self.hasPolicyLit = False
-        self.cbts = None #I want to make this the list on the inprocessing list of cbts
+        self.cbts = [cbt(False, "CBT 1"), cbt(False, "CBT 2")] #I want to make this the list on the inprocessing list of cbts
         self.afe = False
         self.crm = False
         self.sec = sec
